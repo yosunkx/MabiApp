@@ -1,0 +1,73 @@
+body.dark-mode {background-color: #333;color: white;}
+body.light-mode {background-color: white;color: black;}
+input[type="checkbox"] {transform: scale(1.5);}
+.highlight td {background-color: #c0c0c0;color: black}
+.commerceTable  {border-collapse:collapse;border-spacing:0;font-family: Arial, Helvetica, sans-serif;font-size: 14px;overflow:hidden;padding:3px 5px;word-break: normal;text-align: left;vertical-align: top;}
+.commerceTable .title{color: white;}
+.commerceTable td{border-color:rgb(172, 172, 172);border-style:solid;border-width:1px;overflow:hidden;padding:3px 5px;word-break: normal;}
+.commerceTable th{border-color:rgb(172, 172, 172);border-style:solid;border-width:1px;font-weight:normal;overflow:hidden;padding:3px 5px;word-break: normal;}
+.commerceTable .commerceItem{color: black;}
+.commerceTable .itemStats{color: black;background-color:#c0c0c0;}
+#KuraTableDiv .commerceTable .title{background-color:#6aa84f;}
+#KuraTableDiv .commerceTable .commerceItem{background-color:#d9ead3;}
+#CalidaTableDiv .commerceTable .title{background-color:#6495ED;}
+#CalidaTableDiv .commerceTable .commerceItem{background-color:#c9daf8;}
+.commerceTable .blackLeft{border-left: 2px solid black;}
+.commerceTable .blackRight{border-right: 2px solid black;}
+.commerceTable .blackTop{border-top: 2px solid black;}
+.commerceTable .blackBottom{border-bottom: 2px solid black;}
+.countdownTitle {font-size: 20px;font-weight: bold;}
+.commerceTimer {font-size: 16px;}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    padding: 10px;
+}
+
+.tables-wrapper {
+    flex: 1 1 60%; /* Adjust this to control the space taken by tables */
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.table-container {
+    flex: 1 1 50%; /* Each table takes up half the space of their wrapper */
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.countdown-container {
+    flex: 1 1 20%; /* Adjust this to control the space taken by timers */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* Media queries remain unchanged */
+
+
+/* Large screens (above 1080p) */
+@media (min-width: 1921px) {
+    .table-container, .countdown-container {
+        transform: scale(2); /* Adjust scale as needed */
+    }
+}
+
+/* Small screens (below 1080p) */
+@media (max-width: 1080px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .table-container, .countdown-container {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
