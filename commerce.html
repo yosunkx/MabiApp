@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Commerce Checklist</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-1970-2030.min.js"></script>
+
+</head>
+<body>
+
+<button id="themeToggle">Toggle Theme</button>
+
+<div class="container">
+	<div class="tables-wrapper">
+
+    <div id="KuraTableDiv" class="table-container">
+        <table id="KuraTable" class="commerceTable" style="table-layout: fixed; width: 601px">
+        <colgroup>
+        <col style="width: 166px">
+        <col style="width: 48px">
+        <col style="width: 208px">
+        <col style="width: 48px">
+        <col style="width: 68px">
+        <col style="width: 63px">
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="title blackTop blackLeft" colspan="2">Karu Forest</th>
+			<th class="title blackTop">Cost(Item)</th>
+            <th class="title blackTop">QTY</th>
+            <th class="title blackTop">TOTAL</th>
+            <th class="title blackTop blackRight">
+              <button onclick="uncheckAllCheckboxes('KuraTable')">CLEAR</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="commerceItem blackLeft blackTop" colspan="2">Wooden Table</td>
+            <td class="genericCell blackTop crafting">
+				<a href="commerce_items.html#shrimp_taming_bait" target="_blank" class="customLink">Shrimp Taming Bait</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Kneading<br>
+					<strong>Materials:</strong><br>Shrimp(30%) <br>Sugar(38%) <br>Garlic(32%)
+				</div>
+			</td>
+            <td class="genericCell blackTop">4</td>
+            <td class="genericCell blackTop">100</td>
+            <td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('KuraTable', 0, this.checked)" checked="getCheckboxState('KuraTable', 0)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">QTY</td>
+            <td class="itemStats">25</td>
+            <td class="crafting genericCell">
+				<a href="commerce_items.html#shyllien" target="_blank" class="customLink">Shyllien</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Magic Craft<br>
+					<strong>Materials:</strong> Shyllien Crystal x5
+				</div>
+			</td>			
+            <td class="genericCell">2</td>
+            <td class="genericCell">50</td>
+            <td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('KuraTable', 1, this.checked)" checked="getCheckboxState('KuraTable', 1)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">Weight</td>
+            <td class="itemStats">15</td>
+            <td class="genericCell"></td>
+            <td class="genericCell"></td>
+            <td class="genericCell"></td>
+            <td class="genericCell blackRight"></td>
+          </tr>
+          <tr>
+            <td class="commerceItem blackLeft blackTop" colspan="2">Wooden Craft</td>
+            <td class="crafting genericCell blackTop">
+				<a href="commerce_items.html#magic_parchment" target="_blank" class="customLink">Magic Parchment</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Stationery Crafting<br>
+					<strong>Materials:</strong><br>Soft Parchment x1 <br>Mana Herb x10 <br>Sunlight Herb x10(32%)
+				</div>
+			</td>
+            <td class="genericCell blackTop">1</td>
+            <td class="genericCell blackTop">15</td>
+            <td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('KuraTable', 4, this.checked)" checked="getCheckboxState('KuraTable', 3)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">QTY</td>
+            <td class="itemStats">15</td>
+            <td class="crafting genericCell">			
+				<a href="commerce_items.html#tough_string" target="_blank" class="customLink">Tough String</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Weaving<br>
+					<strong>Materials:</strong> Thick Thread Ball x5
+				</div>
+			</td>
+            <td class="genericCell">2</td>
+            <td class="genericCell">30</td>
+            <td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('KuraTable', 5, this.checked)" checked="getCheckboxState('KuraTable', 4)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">Weight</td>
+            <td class="itemStats">15</td>
+            <td class="genericCell"></td>
+            <td class="genericCell"></td>
+            <td class="genericCell"></td>
+            <td class="genericCell blackRight"></td>
+          </tr>
+          <tr>
+            <td class="commerceItem blackLeft blackTop" colspan="2">Stone Horse Statue</td>
+            <td class="genericCell blackTop crafting">
+				<a href="commerce_items.html#hillwen_alloy" target="_blank" class="customLink">Hillwen Alloy</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Hillwen Engineering<br>
+					<strong>Materials:</strong><br>Hillwen x1<br>Nickel Ore Fragment x1<br>Tin Ore Fragment x1<br>Zinc Ore Fragment x1<br>Emerald Core x1<br>or<br>Soft Hillwen Ore Fragment x15
+				</div>
+			</td>
+            <td class="genericCell blackTop">2</td>
+            <td class="genericCell blackTop">20</td>
+            <td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('KuraTable', 7, this.checked)" checked="getCheckboxState('KuraTable', 6)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">QTY</td>
+            <td class="itemStats">10</td>
+            <td class="genericCell crafting">
+				<a href="commerce_items.html#wheat_flour" target="_blank" class="customLink">Wheat Flour</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Milling<br>
+					<strong>Materials:</strong> Wheat x10
+				</div>
+			</td>
+            <td class="genericCell">5</td>
+            <td class="genericCell">50</td>
+            <td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('KuraTable', 8, this.checked)" checked="getCheckboxState('KuraTable', 7)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">Weight</td>
+            <td class="itemStats">25</td>
+            <td class="genericCell"></td>
+            <td class="genericCell"></td>
+            <td class="genericCell"></td>
+            <td class="checkboxCell blackRight"></td>
+          </tr>
+          <tr>
+            <td class="commerceItem blackLeft blackTop" colspan="2">Karu Shiitake Mushroom</td>
+            <td class="genericCell blackTop crafting">
+				<a href="commerce_items.html#spin_gear" target="_blank" class="customLink">Spin Gear</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Hillwen Engineering<br>
+					<strong>Materials:</strong><br>Hillwen x2<br>Hexagonal Bolt x5<br>Hexagonal Nut x5
+				</div>
+			</td>
+            <td class="genericCell blackTop">1</td>
+            <td class="genericCell blackTop">8</td>
+            <td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('KuraTable', 9, this.checked)" checked="getCheckboxState('KuraTable', 9)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">QTY</td>
+            <td class="itemStats">8</td>
+            <td class="genericCell crafting">
+				<a href="commerce_items.html#average_firewood" target="_blank" class="customLink">Average Firewood</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Carpentry<br>
+					<strong>Materials:</strong> Firewood x3
+				</div>
+			</td>
+            <td class="genericCell">5</td>
+            <td class="genericCell">40</td>
+            <td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('KuraTable', 10, this.checked)" checked="getCheckboxState('KuraTable', 10)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">Weight</td>
+            <td class="itemStats">25</td>
+            <td class="genericCell crafting">
+				<a href="commerce_items.html#fine_silk" target="_blank" class="customLink">Fine Silk</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Weaving<br>
+					<strong>Materials:</strong> Thin Thread Ball x5
+				</div>
+			</td>
+            <td class="genericCell">4</td>
+            <td class="genericCell">32</td>
+            <td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('KuraTable', 11, this.checked)" checked="getCheckboxState('KuraTable', 11)"></td>
+          </tr>
+          <tr>
+            <td class="commerceItem blackLeft blackTop" colspan="2">Shellfish Fossil</td>
+            <td class="genericCell blackTop crafting">
+				<a href="commerce_items.html#energy_amplifier" target="_blank" class="customLink">Energy Amplifier</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Hillwen Engineering<br>
+					<strong>Materials:</strong><br>Emerald Core x3<br>Energy Converter x3
+				</div>
+			</td>
+            <td class="genericCell blackTop">2</td>
+            <td class="genericCell blackTop">6</td>
+            <td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('KuraTable', 12, this.checked)" checked="getCheckboxState('KuraTable', 12)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">QTY</td>
+            <td class="itemStats">3</td>
+            <td class="genericCell crafting">
+				<a href="commerce_items.html#sturdy_loop" target="_blank" class="customLink">Sturdy Loop</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Weaving<br>
+					<strong>Materials:</strong><br>Braid x1<br>Infernal Blade Fragment x1
+				</div>
+			</td>
+            <td class="genericCell">1</td>
+            <td class="genericCell">3</td>
+            <td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('KuraTable', 13, this.checked)" checked="getCheckboxState('KuraTable', 13)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft blackBottom">Weight</td>
+            <td class="itemStats blackBottom">30</td>
+            <td class="genericCell blackBottom crafting">
+				<a href="commerce_items.html#magic_quill_pen" target="_blank" class="customLink">Magic Quill Pen</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Stationery Crafting<br>
+					<strong>Materials:</strong><br>Vital Feather x1<br>Mana Herb x10<br>Golden Herb x10
+				</div>
+			</td>
+            <td class="genericCell blackBottom">5</td>
+            <td class="genericCell blackBottom">15</td>
+            <td class="checkboxCell blackRight blackBottom"><input type="checkbox" onclick="saveCheckboxState('KuraTable', 14, this.checked)" checked="getCheckboxState('KuraTable', 14)"></td>
+          </tr>
+        </tbody>
+        </table>
+    </div><br>
+
+    <div id="CalidaTableDiv" class="table-container">
+        <table id="CalidaTable" class="commerceTable" style="table-layout: fixed; width: 601px">
+        <colgroup>
+        <col style="width: 166px">
+        <col style="width: 48px">
+        <col style="width: 208px">
+        <col style="width: 48px">
+        <col style="width: 68px">
+        <col style="width: 63px">
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="title blackTop blackLeft" colspan="2">Calida</th>
+			<th class="title blackTop">Cost(Item)</th>
+            <th class="title blackTop">QTY</th>
+            <th class="title blackTop">TOTAL</th>
+			<th class="title blackTop blackRight">
+				<button onclick="uncheckAllCheckboxes('CalidaTable')">CLEAR</button>
+			</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="commerceItem blackLeft blackTop" colspan="2">Elvan Egg</td>
+            <td class="genericCell blackTop crafting">
+				<a href="commerce_items.html#mp_500_potion" target="_blank" class="customLink">MP 500 Potion</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Potion Making<br>
+					<strong>Materials:</strong><br>Water x1<br>MP 300 Potion x1<br>Four-Leaf Clover x1
+				</div>
+			</td>
+            <td class="genericCell blackTop">1</td>
+            <td class="genericCell blackTop">25</td>
+            <td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('CalidaTable', 0, this.checked)" checked="getCheckboxState('CalidaTable', 0)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">QTY</td>
+            <td class="itemStats">25</td>
+            <td class="genericCell crafting">
+				<a href="commerce_items.html#fine_firewood" target="_blank" class="customLink">Fine Firewood</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Carpentry<br>
+					<strong>Materials:</strong> Average Firewood x3
+				</div>
+			</td>
+            <td class="genericCell">2</td>
+            <td class="genericCell">50</td>
+            <td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('CalidaTable', 1, this.checked)" checked="getCheckboxState('CalidaTable', 1)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">Weight</td>
+            <td class="itemStats">10</td>
+            <td class="genericCell"></td>
+            <td class="genericCell"></td>
+            <td class="genericCell"></td>
+            <td class="genericCell blackRight"></td>
+          </tr>
+          <tr>
+            <td class="commerceItem blackLeft blackTop" colspan="2">Calida Salmon</td>
+            <td class="genericCell blackTop crafting">
+				<a href="commerce_items.html#energy_converter" target="_blank" class="customLink">Energy Converter</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Hillwen Engineering<br>
+					<strong>Materials:</strong><br>Hillwen x1<br>Shyllien x1
+				</div>
+			</td>
+            <td class="genericCell blackTop">1</td>
+            <td class="genericCell blackTop">15</td>
+            <td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('CalidaTable', 4, this.checked)" checked="getCheckboxState('CalidaTable', 3)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">QTY</td>
+            <td class="itemStats">15</td>
+            <td class="genericCell crafting">
+				<a href="commerce_items.html#purified_rabbit_foot" target="_blank" class="customLink">Purified Rabbit Foot</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Magic Craft<br>
+					<strong>Materials:</strong><br>Shyllien x1<br>Mutant Rabbit Foot x1
+				</div>
+			</td>
+            <td class="genericCell">1</td>
+            <td class="genericCell">15</td>
+            <td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('CalidaTable', 5, this.checked)" checked="getCheckboxState('CalidaTable', 4)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">Weight</td>
+            <td class="itemStats">15</td>
+            <td class="genericCell"></td>
+            <td class="genericCell"></td>
+            <td class="genericCell"></td>
+            <td class="genericCell blackRight"></td>
+          </tr>
+          <tr>
+            <td class="commerceItem blackLeft blackTop" colspan="2">Hot Spring Bath Bomb</td>
+            <td class="genericCell blackTop crafting">
+				<a href="commerce_items.html#sundew" target="_blank" class="customLink">Sundew</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Magic Craft<br>
+					<strong>Materials:</strong><br>Shyllien x1<br>Mutant Plant Mucilage x1
+				</div>
+			</td>
+            <td class="genericCell blackTop">3</td>
+            <td class="genericCell blackTop">30</td>
+            <td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('CalidaTable', 7, this.checked)" checked="getCheckboxState('CalidaTable', 6)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">QTY</td>
+            <td class="itemStats">10</td>
+            <td class="genericCell crafting">
+				<a href="commerce_items.html#finest_vanilla_scented_candle" target="_blank" class="customLink">Finest Vanilla Scented Candle</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Handicraft<br>
+					<strong>Materials:</strong><br>Fine Vanilla Scented Candle x1<br>Refined Catalyst x1
+				</div>
+			</td>
+            <td class="genericCell">2</td>
+            <td class="genericCell">20</td>
+            <td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('CalidaTable', 8, this.checked)" checked="getCheckboxState('CalidaTable', 7)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">Weight</td>
+            <td class="itemStats">20</td>
+            <td class="genericCell"></td>
+            <td class="genericCell"></td>
+            <td class="genericCell"></td>
+            <td class="checkboxCell blackRight"></td>
+          </tr>
+          <tr>
+            <td class="commerceItem blackLeft blackTop" colspan="2">Large Camping Tent</td>
+            <td class="genericCell blackTop crafting">
+				<a href="commerce_items.html#artificial_turf" target="_blank" class="customLink">Artificial Turf</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Handicraft<br>
+					<strong>Materials:</strong><br>Fresh Grass x20<br>Bundle of Flowers x5
+				</div>
+			</td>
+            <td class="genericCell blackTop">1</td>
+            <td class="genericCell blackTop">8</td>
+            <td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('CalidaTable', 9, this.checked)" checked="getCheckboxState('CalidaTable', 9)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">QTY</td>
+            <td class="itemStats">8</td>
+            <td class="genericCell crafting">
+				<a href="commerce_items.html#emerald_fuse" target="_blank" class="customLink">Emerald Fuse</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Hillwen Engineering<br>
+					<strong>Materials:</strong> Emerald Core x1
+				</div>
+			</td>
+            <td class="genericCell">1</td>
+            <td class="genericCell">8</td>
+            <td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('CalidaTable', 10, this.checked)" checked="getCheckboxState('CalidaTable', 10)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">Weight</td>
+            <td class="itemStats">25</td>
+            <td class="genericCell crafting">
+				<a href="commerce_items.html#fine_leather_strap" target="_blank" class="customLink">Fine Leather Strap</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Weaving<br>
+					<strong>Materials:</strong> Fine Leather x1
+				</div>
+			</td>
+            <td class="genericCell">5</td>
+            <td class="genericCell">40</td>
+            <td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('CalidaTable', 11, this.checked)" checked="getCheckboxState('CalidaTable', 11)"></td>
+          </tr>
+          <tr>
+            <td class="commerceItem blackLeft blackTop" colspan="2">Pink Salt</td>
+            <td class="genericCell blackTop crafting">
+				<a href="commerce_items.html#large_mythril_nail" target="_blank" class="customLink">Large Mythril Nail</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Refining<br>
+					<strong>Materials:</strong> Mythril Ingot x20
+				</div>
+			</td>
+            <td class="genericCell blackTop">3</td>
+            <td class="genericCell blackTop">9</td>
+            <td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('CalidaTable', 12, this.checked)" checked="getCheckboxState('CalidaTable', 12)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft">QTY</td>
+            <td class="itemStats">3</td>
+            <td class="genericCell crafting">
+				<a href="commerce_items.html#poison_tip_wyvern_ballista_bolt" target="_blank" class="customLink">Poison Tip Wyvern Ballista Bolt</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Handicraft<br>
+					<strong>Materials:</strong><br>Firewood x1<br>Wyvern Claw x1<br>Poison Potion x1<br>
+				</div>
+			</td>
+            <td class="genericCell">3</td>
+            <td class="genericCell">9</td>
+            <td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('CalidaTable', 13, this.checked)" checked="getCheckboxState('CalidaTable', 13)"></td>
+          </tr>
+          <tr>
+            <td class="itemStats blackLeft blackBottom">Weight</td>
+            <td class="itemStats blackBottom">30</td>
+            <td class="genericCell blackBottom crafting">
+				<a href="commerce_items.html#finest_firewood" target="_blank" class="customLink">Finest Firewood</a>
+				<div class="tooltip">
+					<strong>Method:</strong> Carpentry<br>
+					<strong>Materials:</strong> Fine Firewood x3
+				</div>
+			</td>
+            <td class="genericCell blackBottom">3</td>
+            <td class="genericCell blackBottom">9</td>
+            <td class="checkboxCell blackRight blackBottom"><input type="checkbox" onclick="saveCheckboxState('CalidaTable', 14, this.checked)" checked="getCheckboxState('CalidaTable', 14)"></td>
+          </tr>
+        </tbody>
+        </table>
+    </div><br>
+
+    <div id="OasisTableDiv" class="table-container">
+        <table id="OasisTable" class="commerceTable" style="table-layout: fixed; width: 601px">
+			<colgroup>
+			<col style="width: 166px">
+			<col style="width: 48px">
+			<col style="width: 208px">
+			<col style="width: 48px">
+			<col style="width: 68px">
+			<col style="width: 63px">
+			</colgroup>
+			<thead>
+			  <tr>
+				<th class="title blackTop blackLeft" colspan="2">Oasis</th>
+				<th class="title blackTop">Cost(Item)</th>
+				<th class="title blackTop">QTY</th>
+				<th class="title blackTop">TOTAL</th>
+				<th class="title blackTop blackRight">
+					<button onclick="uncheckAllCheckboxes('OasisTable')">CLEAR</button>
+				</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td class="commerceItem blackLeft blackTop" colspan="2">Fine Sand</td>
+				<td class="genericCell blackTop crafting">
+					<a href="commerce_items.html#stamina_500_potion" target="_blank" class="customLink">Stamina 500 Potion</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Potion Making<br>
+						<strong>Materials:</strong><br>Water x1<br>Stamina 300 Potion x1<br>Four-Leaf Clover x1
+					</div>
+				</td>
+				<td class="genericCell blackTop">3</td>
+				<td class="genericCell blackTop">75</td>
+				<td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('OasisTable', 0, this.checked)" checked="getCheckboxState('OasisTable', 0)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">QTY</td>
+				<td class="itemStats">25</td>
+				<td class="genericCell crafting">
+					<a href="commerce_items.html#braid" target="_blank" class="customLink">Braid</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Weaving<br>
+						<strong>Materials:</strong><br>Thick Thread Ball x1<br>Thin Thread Ball x1
+					</div>
+				</td>
+				<td class="genericCell">2</td>
+				<td class="genericCell">50</td>
+				<td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('OasisTable', 1, this.checked)" checked="getCheckboxState('OasisTable', 1)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">Weight</td>
+				<td class="itemStats">15</td>
+				<td class="genericCell"></td>
+				<td class="genericCell"></td>
+				<td class="genericCell"></td>
+				<td class="genericCell blackRight"></td>
+			  </tr>
+			  <tr>
+				<td class="commerceItem blackLeft blackTop" colspan="2">Poison Ghost Wings</td>
+				<td class="genericCell blackTop crafting">
+					<a href="commerce_items.html#cotton_cushion_stuffing" target="_blank" class="customLink">Cotton Cushion Stuffing</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Handicraft<br>
+						<strong>Materials:</strong><br>Fine Wool x20<br>Thin Thread Ball x5<br>
+					</div>
+				</td>
+				<td class="genericCell blackTop">1</td>
+				<td class="genericCell blackTop">15</td>
+				<td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('OasisTable', 4, this.checked)" checked="getCheckboxState('OasisTable', 3)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">QTY</td>
+				<td class="itemStats">15</td>
+				<td class="genericCell crafting">
+					<a href="commerce_items.html#finest_silk" target="_blank" class="customLink">Finest Silk</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Weaving<br>
+						<strong>Materials:</strong> Thin Thread Ball x6
+					</div>
+				</td>
+				<td class="genericCell">2</td>
+				<td class="genericCell">30</td>
+				<td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('OasisTable', 5, this.checked)" checked="getCheckboxState('OasisTable', 4)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">Weight</td>
+				<td class="itemStats">15</td>
+				<td class="genericCell"></td>
+				<td class="genericCell"></td>
+				<td class="genericCell"></td>
+				<td class="genericCell blackRight"></td>
+			  </tr>
+			  <tr>
+				<td class="commerceItem blackLeft blackTop" colspan="2">Oasis Painting</td>
+				<td class="genericCell blackTop crafting">
+					<a href="commerce_items.html#finest_leather_strap" target="_blank" class="customLink">Finest Leather Strap</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Weaving<br>
+						<strong>Materials:</strong> Finest Leather x1
+					</div>
+				</td>
+				<td class="genericCell blackTop">1</td>
+				<td class="genericCell blackTop">10</td>
+				<td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('OasisTable', 7, this.checked)" checked="getCheckboxState('OasisTable', 6)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">QTY</td>
+				<td class="itemStats">10</td>
+				<td class="genericCell crafting">
+					<a href="commerce_items.html#tough_thread" target="_blank" class="customLink">Tough Thread</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Weaving<br>
+						<strong>Materials:</strong> Thin Thread Ball x5
+					</div>
+				</td>
+				<td class="genericCell">3</td>
+				<td class="genericCell">30</td>
+				<td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('OasisTable', 8, this.checked)" checked="getCheckboxState('OasisTable', 7)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">Weight</td>
+				<td class="itemStats">20</td>
+				<td class="genericCell"></td>
+				<td class="genericCell"></td>
+				<td class="genericCell"></td>
+				<td class="checkboxCell blackRight"></td>
+			  </tr>
+			  <tr>
+				<td class="commerceItem blackLeft blackTop" colspan="2">Cactus Flower</td>
+				<td class="genericCell blackTop crafting">
+					<a href="commerce_items.html#spirit_liqueur" target="_blank" class="customLink">Spirit Liqueur</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Potion Making<br>
+						<strong>Materials:</strong><br>White Herb x1<br>Piece of an Ancient<br>Spirit Fossil x1<br>Elemental Remover x2
+					</div>
+				</td>
+				<td class="genericCell blackTop">1</td>
+				<td class="genericCell blackTop">8</td>
+				<td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('OasisTable', 9, this.checked)" checked="getCheckboxState('OasisTable', 9)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">QTY</td>
+				<td class="itemStats">8</td>
+				<td class="genericCell crafting">
+					<a href="commerce_items.html#silver_plate" target="_blank" class="customLink">Silver Plate</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Refining<br>
+						<strong>Materials:</strong> Silver Ingot x1
+					</div>
+				</td>
+				<td class="genericCell">2</td>
+				<td class="genericCell">16</td>
+				<td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('OasisTable', 10, this.checked)" checked="getCheckboxState('OasisTable', 10)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">Weight</td>
+				<td class="itemStats">25</td>
+				<td class="genericCell crafting">
+					<a href="commerce_items.html#fine_fabric" target="_blank" class="customLink">Fine Fabric</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Weaving<br>
+						<strong>Materials:</strong> Thick Thread Ball x5
+					</div>
+				</td>
+				<td class="genericCell">4</td>
+				<td class="genericCell">32</td>
+				<td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('OasisTable', 11, this.checked)" checked="getCheckboxState('OasisTable', 11)"></td>
+			  </tr>
+			  <tr>
+				<td class="commerceItem blackLeft blackTop" colspan="2">Giant Canine Fossil</td>
+				<td class="genericCell blackTop crafting">
+					<a href="commerce_items.html#pet_playset" target="_blank" class="customLink">Pet Playset</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Fynn Crafting<br>
+						<strong>Materials:</strong><br>Pet's Favorite Knickknacks x1<br>Wood Board x1<br>
+					</div>
+				</td>
+				<td class="genericCell blackTop">1</td>
+				<td class="genericCell blackTop">3</td>
+				<td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('OasisTable', 12, this.checked)" checked="getCheckboxState('OasisTable', 12)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">QTY</td>
+				<td class="itemStats">3</td>
+				<td class="genericCell crafting">
+					<a href="commerce_items.html#hay_bale" target="_blank" class="customLink">Hay Bale</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Handicraft<br>
+						<strong>Materials:</strong><br>Wheat Chaff x20<br>Finest Leather Strap x1
+					</div>
+				</td>
+				<td class="genericCell">3</td>
+				<td class="genericCell">9</td>
+				<td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('OasisTable', 13, this.checked)" checked="getCheckboxState('OasisTable', 13)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft blackBottom">Weight</td>
+				<td class="itemStats blackBottom">30</td>
+				<td class="genericCell blackBottom crafting">
+					<a href="commerce_items.html#enchanted_firewood" target="_blank" class="customLink">Enchanted Firewood</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Magic Craft<br>
+						<strong>Materials:</strong><br>Shyllien x1<br>Hillwen x1<br>Average Firewood x1<br>
+					</div>
+				</td>
+				<td class="genericCell blackBottom">5</td>
+				<td class="genericCell blackBottom">15</td>
+				<td class="checkboxCell blackRight blackBottom"><input type="checkbox" onclick="saveCheckboxState('OasisTable', 14, this.checked)" checked="getCheckboxState('OasisTable', 14)"></td>
+			  </tr>
+			</tbody>
+			</table>
+	</div><br>
+
+    <div id="PeraTableDiv" class="table-container">
+        <table id="PeraTable" class="commerceTable" style="table-layout: fixed; width: 601px">
+			<colgroup>
+			<col style="width: 166px">
+			<col style="width: 48px">
+			<col style="width: 208px">
+			<col style="width: 48px">
+			<col style="width: 68px">
+			<col style="width: 63px">
+			</colgroup>
+			<thead>
+			  <tr>
+				<th class="title blackTop blackLeft" colspan="2">Pera Volcano</th>
+				<th class="title blackTop">Cost(Item)</th>
+				<th class="title blackTop">QTY</th>
+				<th class="title blackTop">TOTAL</th>
+				<th class="title blackTop blackRight">
+					<button onclick="uncheckAllCheckboxes('PeraTable')">CLEAR</button>
+				</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td class="commerceItem blackLeft blackTop" colspan="2">Volcanic Mud Pack</td>
+				<td class="genericCell blackTop crafting">
+					<a href="commerce_items.html#copper_plate" target="_blank" class="customLink">Copper Plate</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Refining<br>
+						<strong>Materials:</strong> Copper Ingot x1
+					</div>
+				</td>
+				<td class="genericCell blackTop">2</td>
+				<td class="genericCell blackTop">50</td>
+				<td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('PeraTable', 0, this.checked)" checked="getCheckboxState('PeraTable', 0)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">QTY</td>
+				<td class="itemStats">25</td>
+				<td class="genericCell crafting">
+					<a href="commerce_items.html#mysterious_herb_powder" target="_blank" class="customLink">Mysterious Herb Powder</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Magic Craft<br>
+						<strong>Materials:</strong><br>Bloody Herb x1<br>Mana Herb x1<br>Posion Herb x1<br>
+					</div>
+				</td>
+				<td class="genericCell">3</td>
+				<td class="genericCell">75</td>
+				<td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('PeraTable', 1, this.checked)" checked="getCheckboxState('PeraTable', 1)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">Weight</td>
+				<td class="itemStats">15</td>
+				<td class="genericCell"></td>
+				<td class="genericCell"></td>
+				<td class="genericCell"></td>
+				<td class="genericCell blackRight"></td>
+			  </tr>
+			  <tr>
+				<td class="commerceItem blackLeft blackTop" colspan="2">Magma Stone</td>
+				<td class="genericCell blackTop crafting">
+					<a href="commerce_items.html#mythril_plate" target="_blank" class="customLink">Mythril Plate</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Refining<br>
+						<strong>Materials:</strong> Mythril Ingot x1
+					</div>
+				</td>
+				<td class="genericCell blackTop">2</td>
+				<td class="genericCell blackTop">30</td>
+				<td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('PeraTable', 4, this.checked)" checked="getCheckboxState('PeraTable', 3)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">QTY</td>
+				<td class="itemStats">15</td>
+				<td class="genericCell crafting">
+					<a href="commerce_items.html#barley_flour" target="_blank" class="customLink">Barley Flour</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Milling<br>
+						<strong>Materials:</strong> Barley x10
+					</div>
+				</td>
+				<td class="genericCell">3</td>
+				<td class="genericCell">45</td>
+				<td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('PeraTable', 5, this.checked)" checked="getCheckboxState('PeraTable', 4)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">Weight</td>
+				<td class="itemStats">15</td>
+				<td class="genericCell"></td>
+				<td class="genericCell"></td>
+				<td class="genericCell"></td>
+				<td class="genericCell blackRight"></td>
+			  </tr>
+			  <tr>
+				<td class="commerceItem blackLeft blackTop" colspan="2">Ixion Horn</td>
+				<td class="genericCell blackTop crafting">
+					<a href="commerce_items.html#marionette_500_potion" target="_blank" class="customLink">Marionette 500 Potion</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Potion Crafting<br>
+						<strong>Materials:</strong><br>Zinc Ore Fragment x1<br>Tin Ore Fragment x1<br>Nickel Ore Fragment x1<br>Gold Herb x1<br>Base Potion x1
+					</div>
+				</td>
+				<td class="genericCell blackTop">3</td>
+				<td class="genericCell blackTop">30</td>
+				<td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('PeraTable', 7, this.checked)" checked="getCheckboxState('PeraTable', 6)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">QTY</td>
+				<td class="itemStats">10</td>
+				<td class="genericCell crafting">
+					<a href="commerce_items.html#gold_plate" target="_blank" class="customLink">Gold Plate</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Refining<br>
+						<strong>Materials:</strong> Gold Ingot x1
+					</div>
+				</td>
+				<td class="genericCell">5</td>
+				<td class="genericCell">50</td>
+				<td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('PeraTable', 8, this.checked)" checked="getCheckboxState('PeraTable', 7)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">Weight</td>
+				<td class="itemStats">20</td>
+				<td class="genericCell"></td>
+				<td class="genericCell"></td>
+				<td class="genericCell"></td>
+				<td class="checkboxCell blackRight"></td>
+			  </tr>
+			  <tr>
+				<td class="commerceItem blackLeft blackTop" colspan="2">Volcano Lizard Egg</td>
+				<td class="genericCell blackTop crafting">
+					<a href="commerce_items.html#glittering_paper" target="_blank" class="customLink">Glittering Paper</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Synthesis<br>
+						<strong>Materials:</strong><br>Paper x10<br>Small Silver Gem x1<br>Small Red Gem x1<br>Small Blue Gem x1<br>Small Green Gem x1
+					</div>
+				</td>
+				<td class="genericCell blackTop">5</td>
+				<td class="genericCell blackTop">40</td>
+				<td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('PeraTable', 9, this.checked)" checked="getCheckboxState('PeraTable', 9)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">QTY</td>
+				<td class="itemStats">8</td>
+				<td class="genericCell crafting">
+					<a href="commerce_items.html#finest_fabric" target="_blank" class="customLink">Finest Fabric</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Weaving<br>
+						<strong>Materials:</strong> Thick Thread Ball x6
+					</div>
+				</td>
+				<td class="genericCell">5</td>
+				<td class="genericCell">40</td>
+				<td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('PeraTable', 10, this.checked)" checked="getCheckboxState('PeraTable', 10)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">Weight</td>
+				<td class="itemStats">25</td>
+				<td class="genericCel crafting">
+					<a href="commerce_items.html#hp_500_potion" target="_blank" class="customLink">HP 500 Potion</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Potion Making<br>
+						<strong>Materials:</strong><br>Water x1<br>HP 300 Potion x1<br>Four-Leaf Clover x1
+					</div>
+				</td>
+				<td class="genericCell">2</td>
+				<td class="genericCell">16</td>
+				<td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('PeraTable', 11, this.checked)" checked="getCheckboxState('PeraTable', 11)"></td>
+			  </tr>
+			  <tr>
+				<td class="commerceItem blackLeft blackTop" colspan="2">Raspa Black Leopard Leather</td>
+				<td class="genericCell blackTop crafting">
+					<a href="commerce_items.html#mutant" target="_blank" class="customLink">Mutant</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Magic Craft<br>
+						<strong>Materials:</strong><br>Mutant Rabbit Foot x10<br>Mutant Plant Mucilage x5<br>Sasquatch Heart x3
+					</div>
+				</td>
+				<td class="genericCell blackTop">1</td>
+				<td class="genericCell blackTop">3</td>
+				<td class="checkboxCell blackTop blackRight"><input type="checkbox" onclick="saveCheckboxState('PeraTable', 12, this.checked)" checked="getCheckboxState('PeraTable', 12)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft">QTY</td>
+				<td class="itemStats">3</td>
+				<td class="genericCell crafting">
+					<a href="commerce_items.html#harmonious_cosmos_perfume" target="_blank" class="customLink">Harmonious Cosmos Perfume</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Fynn Crafting<br>
+						<strong>Materials:</strong><br>Empty Bottle x1<br>Magic Powder x10<br>Base Herb x10<br>Cosmos Extract x1
+					</div>
+				</td>
+				<td class="genericCell">2</td>
+				<td class="genericCell">6</td>
+				<td class="checkboxCell blackRight"><input type="checkbox" onclick="saveCheckboxState('PeraTable', 13, this.checked)" checked="getCheckboxState('PeraTable', 13)"></td>
+			  </tr>
+			  <tr>
+				<td class="itemStats blackLeft blackBottom">Weight</td>
+				<td class="itemStats blackBottom">30</td>
+				<td class="genericCell blackBottom crafting">
+					<a href="commerce_items.html#special_firewood" target="_blank" class="customLink">Special Firewood</a>
+					<div class="tooltip">
+						<strong>Method:</strong> Carpentry<br>
+						<strong>Materials:</strong><br>Finest Firewood x1<br>Purified Enhancer x1
+					</div>
+				</td>
+				<td class="genericCell blackBottom">3</td>
+				<td class="genericCell blackBottom">9</td>
+				<td class="checkboxCell blackRight blackBottom"><input type="checkbox" onclick="saveCheckboxState('PeraTable', 14, this.checked)" checked="getCheckboxState('PeraTable', 14)"></td>
+			  </tr>
+			</tbody>
+			</table>
+	</div><br>
+
+	</div>
+
+	<div class="countdown-container">
+		<div id="weeklyCountdown">
+			<div class="countdownTitle">Weekly Countdown</div>
+			<div class="commerceTimer"></div>
+		</div>
+		
+		<div id="seasonCountdown">
+			<div class="countdownTitle" class="countdown-container">Season Countdown</div>
+			<div class="commerceTimer"></div>
+		</div>
+	</div>
+</div>
+
+<button onclick="clearLocalStorage()">Clear Local Storage</button>
+
+<script>
+    // Initialize theme
+    let theme = localStorage.getItem('theme') || 'light-mode';
+    document.body.className = theme;
+
+    // Function to toggle theme
+    document.getElementById('themeToggle').addEventListener('click', function() {
+        theme = (theme === 'light-mode') ? 'dark-mode' : 'light-mode';
+        document.body.className = theme;
+        localStorage.setItem('theme', theme);
+    });
+
+    //functions to handle checkboxes
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('table').forEach(table => {
+            const tableId = table.id;
+            console.log(`Processing table with ID: ${tableId}`);
+            if (!tableId) {
+                console.error('Table ID is missing or incorrect.');
+                return;
+            }
+
+            table.querySelectorAll('input[type="checkbox"]').forEach((checkbox, index) => {
+                const uniqueCheckboxId = `${tableId}-${index}`;
+                console.log(`Initializing checkbox with ID: ${uniqueCheckboxId}`);
+                checkbox.checked = getCheckboxState(uniqueCheckboxId);
+                checkbox.addEventListener('change', function() {
+                    console.log(`Checkbox state changed for ID: ${uniqueCheckboxId}, Checked: ${this.checked}`);
+                    saveCheckboxState(uniqueCheckboxId, this.checked);
+                    updateRowHighlight(this, this.checked);
+                });
+                updateRowHighlight(checkbox, checkbox.checked);
+            });
+        });
+    });
+
+    function saveCheckboxState(uniqueCheckboxId, isChecked) {
+        localStorage.setItem(uniqueCheckboxId, isChecked ? 'checked' : 'unchecked');
+    }
+
+    function getCheckboxState(uniqueCheckboxId) {
+        return localStorage.getItem(uniqueCheckboxId) === 'checked';
+    }
+
+    function updateRowHighlight(checkbox, isChecked) {
+        if (isChecked) {
+            checkbox.closest('tr').classList.add('highlight');
+        } else {
+            checkbox.closest('tr').classList.remove('highlight');
+        }
+    }
+
+    function uncheckAllCheckboxes(tableId) {
+		const table = document.getElementById(tableId);
+		if (!table) {
+			console.error(`Table with ID ${tableId} not found.`);
+			return;
+		}
+
+		table.querySelectorAll('input[type="checkbox"]').forEach((checkbox, index) => {
+			const uniqueCheckboxId = `${tableId}-${index}`;
+			checkbox.checked = false;
+			saveCheckboxState(uniqueCheckboxId, false);
+			updateRowHighlight(checkbox, false);
+		});
+	}
+
+// Other functions (saveCheckboxState, getCheckboxState, updateRowHighlight) remain unchanged
+    
+
+
+    //functions to handle countdown timers
+    function getNextServerUpdateTime() { 
+        var targetTime = moment.tz("America/New_York").day(6).hour(10).minute(0).second(0); // Server updates at Saturday 10 AM in Eastern Time
+        if (moment().tz("America/New_York").isAfter(targetTime)) {
+            targetTime.add(1, 'weeks');
+        }
+        return targetTime;
+    }
+
+    function updateWeeklyCountdown() {
+        var targetTime = getNextServerUpdateTime();
+        var now = moment();
+        var distance = targetTime - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('weeklyCountdown').querySelector('.commerceTimer').innerHTML = days + "d " + hours + "h " + minutes + "m";
+
+        if (distance < 0) {
+            clearInterval(weeklyInterval);
+            document.getElementById('weeklyCountdown').querySelector('.commerceTimer').innerHTML = "EXPIRED";
+        }
+    }
+
+    var weeklyInterval = setInterval(updateWeeklyCountdown, 1000);
+  
+    function clearLocalStorage() {
+        console.log('Clearing Local Storage');
+        localStorage.clear();
+        location.reload();
+    }
+    
+    var weeklyInterval = setInterval(updateWeeklyCountdown, 1000);
+
+    function getSeasonEndTime() {
+        // Set the target date and time in Eastern Time
+        return moment.tz("2024-03-01 03:00", "America/New_York");
+    }
+
+    function updateSeasonCountdown() {
+        var targetDateTime = getSeasonEndTime();
+        var now = moment();
+        var distance = targetDateTime - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('seasonCountdown').querySelector('.commerceTimer').innerHTML = days + "d " + hours + "h " + minutes + "m";
+
+        if (distance < 0) {
+            clearInterval(seasonInterval);
+            document.getElementById('seasonCountdown').querySelector('.commerceTimer').innerHTML = "EXPIRED";
+        }
+    }
+
+    var seasonInterval = setInterval(updateSeasonCountdown, 1000);
+
+
+</script>
+</body>
+</html>
