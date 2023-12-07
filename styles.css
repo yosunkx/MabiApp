@@ -46,6 +46,21 @@ input[type="checkbox"] {transform: scale(1.5);}
     white-space: nowrap;
 }
 .commerceTable .crafting:hover .tooltip {display: block;}
+.itemList {
+    border-collapse: collapse;
+    background-color: white;
+}
+.itemList td {
+    border: 1px solid black; /* Black border with 1px width */
+    text-align: left; /* Align text to the left */
+    vertical-align: top; /* Align text to the top */
+    padding: 10px; /* Padding inside each cell */
+    color: black; /* Text color */
+}
+.itemList .itemCategory {
+    background-color: lightblue; /* Light blue background for 'itemCategory' cells */
+}
+
 .customLink {color: inherit;}
 .customLink:visited {color:inherit}
 .customLink:hover {color: blue;}
@@ -77,6 +92,11 @@ input[type="checkbox"] {transform: scale(1.5);}
     flex-direction: column;
     box-sizing: border-box;
     padding: 10px;
+}
+.itemTableContainer {
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
 }
 /* Large screens (above 1080p) */
 @media (min-width: 1921px) {

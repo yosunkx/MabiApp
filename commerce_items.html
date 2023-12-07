@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Commerce Items List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div id="container">
+    <div id="itemTables"></div>
+</div>
+
+
+<script>
+    function sortByMakingMethod(a, b) {
+        const methodA = a[0][1].toUpperCase(); // Making method of item A
+        const methodB = b[0][1].toUpperCase(); // Making method of item B
+        if (methodA < methodB) {
+            return -1;
+        }
+        if (methodA > methodB) {
+            return 1;
+        }
+        return 0;
+    }
+
+    function generateSortedTables(items) {
+        // Sort items by making method
+        const sortedItems = items.sort(sortByMakingMethod);
+
+        // Generate tables for sorted items
+        return generateTables(sortedItems);
+    }
+
+    function generateTable(itemData) {
+        // Extracting information from the input array
+        const [nameAndMethod, materials, obtainedFrom, soldBy] = itemData;
+
+        // Start building the HTML string
+        let html = `<div id="${nameAndMethod[0].toLowerCase().replace(/ /g, '_')}" class="itemList itemTableContainer"><table>`;
+        html += `<tr><td rowspan="${3 + (obtainedFrom ? 1 : 0) + (soldBy ? 1 : 0)}" class="itemImage"><img src="${nameAndMethod[0].toLowerCase().replace(/ /g, '_')}.png"></td>`;
+        html += `<td class="itemCategory">Name</td><td colspan="3">${nameAndMethod[0]}</td></tr>`;
+        html += `<tr><td class="itemCategory">Making Method</td><td colspan="3">${nameAndMethod[1]}</td></tr>`;
+
+        // Materials row
+        const materialsText = [];
+        for (let i = 0; i < materials.length; i += 2) {
+            materialsText.push(`${materials[i]} x ${materials[i + 1]}`);
+        }
+        const formattedMaterialsText = materialsText.join('<br>');
+        html += `<tr><td class="itemCategory">Materials Needed</td><td colspan="3">${formattedMaterialsText}</td></tr>`;
+
+
+
+        // Optionally add rows for Obtained From and Sold By
+        if (obtainedFrom) {
+            html += `<tr><td class="itemCategory">${obtainedFrom[0]}</td><td colspan="3">${obtainedFrom[1]}</td></tr>`;
+        }
+        if (soldBy) {
+            html += `<tr><td class="itemCategory">${soldBy[0]}</td><td colspan="3">${soldBy[1]}</td></tr>`;
+        }
+
+        // Close the HTML string
+        html += `</table></div>`;
+
+        return html;
+    }
+
+    function generateTables(items) {
+        return items.map(item => generateTable(item)).join('');
+    }
+
+    const items = [
+        [["Shrimp Taming Bait", "Kneading"], ["Shrimp", "30%","Sugar", "38%", "Garlic", "32%"],],
+        [["Shyllien", "Magic Craft"], ["Shyllien Crystal", "5"], ["Sold By", "Seal Merchant(Monday)(x50, 10 seals)"]],
+        [["Magic Parchment", "Stationery Crafting"], ["Soft Parchment", "1", "Mana Herb", "10", "Sunlight Herb", 10], ["Obtained From", "Bookstore part-time job"]],
+        [["Tough String", "Weaving"], ["Thick Thread ball", "5"]],
+        [["Hillwen Alloy", "Hillwen Engineering"], ["Hillwen", "1", "Nickel Ore Fragment", "1", "Tin Ore Fragment", "1", "Zinc Ore Fragment", "1", "Emerald Core", "1", "or Soft Hillwen Ore Fragment","15"], ["Sold By", "Seal Merchant(Monday)(x20, 30 seals)"]],
+        [["Wheat Flour", "Milling"], ["Wheat", "10"], ["Obtained From", "Gorcery Store part-time job"]],
+        [["Spin Gear", "Hillwen Engineering"], ["Hillwen", "2", "Hexagonal Bolt" , "5", "Hexagonal Nut", "5"]],
+        [["Average Firewood", "Carpentry"], ["Firewood", "3"], ["Obtained From", "Chopping Block"], ["Sold by", "Seal Merchant(Monday)(x10, 8 seals)"]],
+        [["Fine Silk", "Weaving"], ["Thin Thread Ball", "5"], ["Sold by", "Seal Merchant(Monday)(x10, 15 seals)"]],
+        [["Energy Amplifier", "Hillwen Engineering"], ["Emerald Core", "3" ,"Energy Converter", "3"]],
+        [["Sturdy Loop", "Weaving"], ["Braid", "1" ,"Infernal Blade Fragment", "1"], ["Obtained From", "Clothing Store part-time job"]],
+        [["Magic Quill Pen", "Stationery Crafting"], ["Vital Feather", "1" ,"Mana Herb", "10", "Golden Herb", "10"], ["Obtained From", "Bookstore Store part-time job"]],
+        [["MP 500 Potion", "Potion Making"], ["Water", "1" ,"MP 300 Potion", "1", "Four-Leaf Clover", "1"], ["Obtained From", "Healer Store part-time job"]],
+        [["Fine Firewood", "Carpentry"], ["Average Firewood", "3"], ["Obtained From", "Chopping Block"], ["Sold by", "Seal Merchant(Monday)(x10, 15 seals)"]],
+        [["Energy Converter", "Hillwen Engineering"], ["Hillwen", "1", "Shyllien" , "1"]],
+        [["Purified Rabbit Foot", "Magic Craft"], ["Shyllien", "1", "Mutant Rabbit Foot" , "1"]],
+        [["Sundew", "Magic Craft"], ["Shyllien", "1", "Mutant Plant Mucilage" , "1"]],
+        [["Finest Vanilla Scented Candle", "Handicraft"], ["Fine Vanilla Scented Candle", "1", "Refined Catalyst" , "1"]],
+        [["Artificial Turf", "Handicraft"], ["Fresh Grass", "20", "Bundle of Flowers" , "5"]],
+        [["Emeral Fuse", "Hillwen Engineering"], ["Emerald Core", "1"]],
+        [["Fine Leather Strap", "Weaving"], ["Fine Leather", "1"]],
+        [["Large Mythril Nail", "Refining"], ["Mythril Ingot", "20"]],
+        [["Poison Tip Wyvern Ballista Bolt", "Handicraft"], ["Firewood", "1", "Wyvern Claw" , "1", "Poison Potion" , "1"]],
+        [["Finest Firewood", "Carpentry"], ["Fine Firewood", "3"], ["Obtained From", "Chopping Block"], ["Sold by", "Seal Merchant(Monday)(30 seals)"]],
+        [["Stamina 500 Potion", "Potion Making"], ["Water", "1" ,"Stamina 300 Potion", "1", "Four-Leaf Clover", "1"], ["Obtained From", "Healer Store part-time job"]],
+        [["Braid", "Weaving"], ["Thin Thread Ball", "1", "Thick Thread Ball", "1"], ["Obtained From", "Clothing Store part-time job"]],
+        [["Cotton Cushion Stuffing", "Handicraft"], ["Fine Wool", "20", "Thin Thread Ball" , "5"]],
+        [["Finest Silk", "Weaving"], ["Thin Thread Ball", "6"], ["Sold by", "Seal Merchant(Monday)(x10, 30 seals)"]],
+        [["Finest Leather Strap", "Weaving"], ["Finest Leather", "1"]],
+        [["Tough Thread", "Weaving"], ["Thin Thread ball", "5"]],
+        [["Spirit Liqueur", "Potion Making"], ["White Herb", "1" ,"Piece of an Ancient Spirit Fossil", "1", "Elemental Remover", "2"]],
+        [["Silver Plate", "Refining"], ["Silver Ingot", "1"]],
+        [["Fine Fabric", "Weaving"], ["Thick Thread Ball", "5"], ["Obtained From", "Clothing Store part-time job"]],
+        [["Pet Playset", "Fynn Crafting"], ["Pet's Favorite Knickknacks", "1", "Wood Board" , "1"]],
+        [["Hay Bale", "Handicraft"], ["Wheat Chaff", "20", "Finest Leather Strap" , "1"]],
+        [["Enchanted Firewood", "Magic Craft"], ["Shyllien", "1", "Hillwen" , "1", "Average Firewood", "1"]],
+        [["Copper Plate", "Refining"], ["Copper Ingot", "1"]],
+        [["Mysterious Herb Powder", "Magic Craft"], ["Bloody Herb", "1", "Mana Herb" , "1", "Poison Herb", "1"]],
+        [["Mythril Plate", "Refining"], ["Mythril Ingot", "1"]],
+        [["Barley Flour", "Milling"], ["Barley", "10"], ["Obtained From", "Gorcery Store part-time job"]],
+        [["Marionette 500 Potion", "Potion Making"], ["Zinc Ore Fragment", "1" ,"Tin Ore Fragment", "1", "Nickel Ore Fragment", "1", "Gold Herb", "1", "Base Potion", "1"], ["Sold by", "Seal Merchant(Friday)(x1, 1 seal)"]],
+        [["Gold Plate", "Refining"], ["Gold Ingot", "1"]],
+        [["Glittering Paper", "Handicraft"], ["Paper", "10" ,"Small Silver Gem", "1", "Small Red Gem", "1", "Small Blue Gem", "1", "Small Green Gem", "1"], ["Obtained From", "Strange Books, Fishing at Avon"]],
+        [["Finest Fabric", "Weaving"], ["Thick Thread Ball", "6"], ["Obtained From", "Clothing Store part-time job"]],
+        [["HP 500 Potion", "Potion Making"], ["Water", "1" ,"HP 300 Potion", "1", "Four-Leaf Clover", "1"], ["Obtained From", "Healer Store part-time job"]],
+        [["Mutant", "Magic Craft"], ["Mutant Rabbit Foot", "10", "Mutant Plant Mucilage" , "5", "Sasquatch Heart", "3"]],
+        [["Harmonious Cosmos Perfume", "Fynn Crafting"], ["Empty Bottle", "1" ,"Magic Powder", "10", "Base Herb", "10", "Cosmos Extract", "1"]],
+        [["Special Firewood", "Carpentry"], ["Finest Firewood", "1", "Purified Enhancer", "1"]],
+    ];
+
+    // Generate sorted tables and insert into the div with id 'itemTables'
+    const sortedTablesHtml = generateSortedTables(items);
+    document.getElementById('itemTables').innerHTML = sortedTablesHtml;
+
+</script>
+</body>
+
+</html>
