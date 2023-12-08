@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buff Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="gear-wrapper">
+        <div id="leftAccessory" class="gearSlot gearContainer">
+            Prefix: 
+            <select id="leftAccessoryPrefix" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="Adnate musicBuffEffect">Adnate</option>
+                <option class="Allegro musicBuffEffect">Allegro</option>
+            </select>
+            <select id="leftAccessoryPrefixValue" class="dependentDropdown"></select><br>
+        
+            Suffix: 
+            <select id="leftAccessorySuffix" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="Cadenza musicBuffEffect">Cadenza</option>
+            </select>
+            <select id="leftAccessorySuffixValue" class="dependentDropdown"></select><br>
+
+            Reforge 1:
+            <select id="leftAccessoryReforge1" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="accNormal normalEffect">Normal MK</option>
+                <option class="accExcellent excellentEffect">Excellent MK</option>
+                <option class="accInspire inspireEffect">Inspire MK</option>   
+                <option class="accExcellentChance excellentChance">Excellent Chance</option> 
+                <option class="accInspireChance inspireChance">Inspire Chance</option>     
+            </select>
+            <select id="leftAccessoryReforge1Value" class="dependentDropdown"></select><br>
+
+            Reforge 2:
+            <select id="leftAccessoryReforge2" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="accNormal normalEffect">Normal MK</option>
+                <option class="accExcellent excellentEffect">Excellent MK</option>
+                <option class="accInspire inspireEffect">Inspire MK</option>   
+                <option class="accExcellentChance excellentChance">Excellent Chance</option> 
+                <option class="accInspireChance inspireChance">Inspire Chance</option>     
+            </select>
+            <select id="leftAccessoryReforge2Value" class="dependentDropdown"></select><br>
+
+            Reforge 3:
+            <select id="leftAccessoryReforge3" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="accNormal normalEffect">Normal MK</option>
+                <option class="accExcellent excellentEffect">Excellent MK</option>
+                <option class="accInspire inspireEffect">Inspire MK</option>   
+                <option class="accExcellentChance excellentChance">Excellent Chance</option> 
+                <option class="accInspireChance inspireChance">Inspire Chance</option>     
+            </select>
+            <select id="leftAccessoryReforge3Value" class="dependentDropdown"></select>
+        </div>
+
+        <div id="hat" class="gearSlot gearContainer">
+            Tiara:
+            <select id="hatGear" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="Tiara musicBuffEffect">Yes</option>
+            </select>
+            <select id="hatGearValue" class="dependentDropdown"></select><br>
+
+            Suffix: 
+            <select id="hatSuffix" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="Chorus musicBuffEffect">Chorus</option>
+            </select>
+            <select id="hatSuffixValue" class="dependentDropdown"></select><br>
+
+        </div>
+
+        <div id="rightAccessory" class="gearSlot gearContainer">
+            Prefix: 
+            <select id="rightAccessoryPrefix" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="Adnate musicBuffEffect">Adnate</option>
+                <option class="Allegro musicBuffEffect">Allegro</option>
+            </select>
+            <select id="rightAccessoryPrefixValue" class="dependentDropdown"></select><br>
+        
+            Suffix: 
+            <select id="rightAccessorySuffix" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="Cadenza musicBuffEffect">Cadenza</option>
+            </select>
+            <select id="rightAccessorySuffixValue" class="dependentDropdown"></select><br>
+
+            Reforge 1:
+            <select id="rightAccessoryReforge1" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="accNormal normalEffect">Normal MK</option>
+                <option class="accExcellent excellentEffect">Excellent MK</option>
+                <option class="accInspire inspireEffect">Inspire MK</option>   
+                <option class="accExcellentChance excellentChance">Excellent Chance</option> 
+                <option class="accInspireChance inspireChance">Inspire Chance</option>     
+            </select>
+            <select id="rightAccessoryReforge1Value" class="dependentDropdown"></select><br>
+
+            Reforge 2:
+            <select id="rightAccessoryReforge2" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="accNormal normalEffect">Normal MK</option>
+                <option class="accExcellent excellentEffect">Excellent MK</option>
+                <option class="accInspire inspireEffect">Inspire MK</option>   
+                <option class="accExcellentChance excellentChance">Excellent Chance</option> 
+                <option class="accInspireChance inspireChance">Inspire Chance</option>     
+            </select>
+            <select id="rightAccessoryReforge2Value" class="dependentDropdown"></select><br>
+
+            Reforge 3:
+            <select id="rightAccessoryReforge3" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="accNormal normalEffect">Normal MK</option>
+                <option class="accExcellent excellentEffect">Excellent MK</option>
+                <option class="accInspire inspireEffect">Inspire MK</option>   
+                <option class="accExcellentChance excellentChance">Excellent Chance</option> 
+                <option class="accInspireChance inspireChance">Inspire Chance</option>     
+            </select>
+            <select id="rightAccessoryReforge3Value" class="dependentDropdown"></select>
+        </div>
+
+        <div id="weapon" class="gearSlot weaponContainer">
+            Weapon:
+            <select id="weaponGear" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="GloomySunday musicBuffEffect">Gloomy Sunday</option>
+            </select>
+            <select id="weaponGearValue" class="dependentDropdown"></select><br>
+            Prefix: 
+            <select id="weaponPrefix" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="Adnate musicBuffEffect">Adnate</option>
+                <option class="Moderato musicBuffEffect">Moderato</option>
+                <option class="Allegro musicBuffEffect">Allegro</option>
+                <option class="Ensemble musicBuffEffect">Ensemble</option>
+            </select>
+            <select id="weaponPrefixValue" class="dependentDropdown"></select><br>
+        
+            Suffix: 
+            <select id="weaponSuffix" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="Chord musicBuffEffect">Chord</option>
+            </select>
+            <select id="weaponSuffixValue" class="dependentDropdown"></select><br>
+
+            Reforge 1:
+            <select id="weaponReforge1" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="weaponPE musicBuffEffect">Playing Effect</option>
+                <option class="weaponNormal normalEffect">Normal MK</option>
+                <option class="weaponExcellent excellentEffect">Excellent MK</option>
+                <option class="weaponInspire inspireEffect">Inspire MK</option>   
+                <option class="weaponExcellentChance excellentChance">Excellent Chance</option> 
+                <option class="weaponInspireChance inspireChance">Inspire Chance</option>     
+            </select>
+            <select id="weaponReforge1Value" class="dependentDropdown"></select><br>
+
+            Reforge 2:
+            <select id="weaponReforge2" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="weaponPE musicBuffEffect">Playing Effect</option>
+                <option class="weaponNormal normalEffect">Normal MK</option>
+                <option class="weaponExcellent excellentEffect">Excellent MK</option>
+                <option class="weaponInspire inspireEffect">Inspire MK</option>   
+                <option class="weaponExcellentChance excellentChance">Excellent Chance</option> 
+                <option class="weaponInspireChance inspireChance">Inspire Chance</option>   
+            </select>
+            <select id="weaponReforge2Value" class="dependentDropdown"></select><br>
+
+            Reforge 3:
+            <select id="weaponReforge3" class="mainDropdown">
+                <option class="None">None</option>
+                <option class="weaponPE musicBuffEffect">Playing Effect</option>
+                <option class="weaponNormal normalEffect">Normal MK</option>
+                <option class="weaponExcellent excellentEffect">Excellent MK</option>
+                <option class="weaponInspire inspireEffect">Inspire MK</option>   
+                <option class="weaponExcellentChance excellentChance">Excellent Chance</option> 
+                <option class="weaponInspireChance inspireChance">Inspire Chance</option>    
+            </select>
+            <select id="weaponReforge3Value" class="dependentDropdown"></select>
+        </div>
+
+        <div id="armor" class="armorSlot armorContainer"></div>
+        <div id="offhand" class="weaponSlot weaponContainer"></div>
+        <div id="gloves" class="gearSlot gearContainer"></div>
+        <div id="shoes" class="gearSlot gearContainer"></div>
+        <div id="wing" class="gearSlot gearContainer"></div>
+    </div>
+    
+    <div id="grandmaster" class="buffMiscContainer"></div>
+    <div id="playing" class="buffMiscContainer"></div>
+    <div id="song" class="buffMiscContainer"></div>
+    <div id="musicKnowledge" class="buffMiscContainer"></div>
+    <div id="musicBuffPotion" class="buffMiscContainer"></div>
+    <div id="cairbre" class="buffMiscContainer"></div>
+    <div id="roseBracelet" class="buffMiscContainer"></div>
+    <div id="pet" class="buffMiscContainer"></div>
+    <div id="mainTitle" class="buffMiscContainer"></div>
+    <div id="secondTitle" class="buffMiscContainer"></div>
+    <div id="figure" class="buffMiscContainer"></div>
+    <div id="sequelFigure" class="buffMiscContainer"></div>
+    <div id="petHouse" class="buffMiscContainer"></div>
+    <div id="displayTotals"></div>
+
+
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const optionMappings = {
+            'None': ['0'],
+            'Adnate musicBuffEffect': ['1'],
+            'Allegro musicBuffEffect': ['3'],
+            'Cadenza musicBuffEffect': ['1', '2'],
+            'Chorus musicBuffEffect': ['2', '3'],
+            'Ensemble musicBuffEffect': ['5'],
+            'Moderato musicBuffEffect': ['2'],
+            'Chord musicBuffEffect': ['1'],
+            'accNormal normalEffect': ['1', '2', '3', '4'],
+            'accExcellent excellentEffect': ['1', '2', '3', '4'],
+            'accInspire inspireEffect': ['1', '2', '3', '4'],
+            'accExcellentChance excellentChance': ['1', '2', '3', '4'],
+            'accInspireChance inspireChance': ['1', '2', '3', '4'],
+            'Tiara musicBuffEffect': ['1', '2', '3', '4'],
+            'GloomySunday musicBuffEffect': ['16'],
+            'weaponPE musicBuffEffect': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25'],
+            'weaponNormal normalEffect': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
+            'weaponExcellent excellentEffect': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
+            'weaponInspire inspireEffect': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
+            'weaponExcellentChance excellentChance': ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
+            'weaponInspireChance inspireChance': ['1', '2', '3', '4', '5', '6'],
+        };
+
+        // Function to update the dependent dropdown
+        function updateDependentDropdown(mainDropdownId, dependentDropdownId) {
+            const mainDropdown = document.getElementById(mainDropdownId);
+            const dependentDropdown = document.getElementById(dependentDropdownId);
+            const selectedOptionClass = mainDropdown.options[mainDropdown.selectedIndex].className;
+
+            while (dependentDropdown.options.length > 0) {
+                dependentDropdown.remove(0);
+            }
+
+            if (optionMappings[selectedOptionClass]) {
+                optionMappings[selectedOptionClass].forEach(function(value) {
+                    const option = new Option(value, value);
+                    dependentDropdown.add(option);
+                });
+            }
+            updateTotals();
+        }
+
+        // Function to calculate and update totals
+        function updateTotals() {
+            let musicBuffEffectTotal = 0;
+            let normalEffectTotal = 0;
+            let excellentEffectTotal = 0;
+            let inspireEffectTotal = 0;
+            let excellentChanceTotal = 0;
+            let inspireChanceTotal = 0;
+
+            const dependentDropdowns = document.getElementsByClassName('dependentDropdown');
+            for (let dropdown of dependentDropdowns) {
+                const value = parseInt(dropdown.value);
+                const mainDropdownClass = document.getElementById(dropdown.id.replace('Value', '')).selectedOptions[0].className;
+                
+                if (mainDropdownClass.includes('musicBuffEffect')) musicBuffEffectTotal += value;
+                if (mainDropdownClass.includes('normalEffect')) normalEffectTotal += value;
+                if (mainDropdownClass.includes('excellentEffect')) excellentEffectTotal += value;
+                if (mainDropdownClass.includes('inspireEffect')) inspireEffectTotal += value;
+                if (mainDropdownClass.includes('excellentChance')) excellentChanceTotal += value;
+                if (mainDropdownClass.includes('inspireChance')) inspireChanceTotal += value;
+            }
+
+            const displayArea = document.getElementById('displayTotals');
+            displayArea.innerHTML = `
+                Total Music Buff Effect: ${musicBuffEffectTotal}<br>
+                Total Normal Effect: ${normalEffectTotal}<br>
+                Total Excellent Effect: ${excellentEffectTotal}<br>
+                Total Inspire Effect: ${inspireEffectTotal}<br>
+                Total Excellent Chance: ${excellentChanceTotal}<br>
+                Total Inspire Chance: ${inspireChanceTotal}
+            `;
+        }
+
+        // Attach event listeners to all main dropdowns and update dependent dropdowns
+        const mainDropdowns = document.getElementsByClassName('mainDropdown');
+        for (let dropdown of mainDropdowns) {
+            const dependentDropdownId = dropdown.id + 'Value';
+            updateDependentDropdown(dropdown.id, dependentDropdownId);
+            dropdown.addEventListener('change', function() { 
+                updateDependentDropdown(dropdown.id, dependentDropdownId);
+            });
+        }
+
+        // Attach event listeners to all dependent dropdowns
+        for (let dropdown of document.getElementsByClassName('dependentDropdown')) {
+            dropdown.addEventListener('change', updateTotals);
+        }
+
+        // Initial calculation and display of totals
+        updateTotals();
+    });
+</script>
+</body>
+
+</html>

@@ -67,37 +67,26 @@ input[type="checkbox"] {transform: scale(1.5);}
 
 
 /*flex box*/
-.container {
+.container {display: flex;flex-wrap: wrap;align-items: flex-start;padding: 10px;position: relative;}
+.tables-wrapper {flex: 1 1 60%;display: flex;flex-wrap: wrap;box-sizing: border-box;padding: 5px;}
+.table-container {flex: 1 1 50%; /* Each table takes up half the space of their wrapper */box-sizing: border-box;padding: 5px;}
+.countdown-container {flex: 1 1 20%; /* Adjust this to control the space taken by timers */display: flex;flex-direction: column;box-sizing: border-box;padding: 10px;}
+.itemTableContainer {flex-direction: column;box-sizing: border-box;padding: 20px;}
+.gearContainer {width: 200px;height: 200px;background-color: darkgray;}
+.gear-wrapper {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start; /* Align items to the start of the flex container */
-    padding: 10px;
-    position: relative;
+    gap: 10px; /* Adjust the gap as needed */
+    width: 620px; /* 3 * 200px + 2 * 10px gaps */
 }
-.tables-wrapper {
-    flex: 1 1 60%; /* Adjust this to control the space taken by tables */
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    padding: 5px;
+.gearSlot select {
+    display: inline-block;
+    margin-right: 10px;
 }
-.table-container {
-    flex: 1 1 50%; /* Each table takes up half the space of their wrapper */
-    box-sizing: border-box;
-    padding: 5px;
+.dependentDropdown {
+    display: none;
 }
-.countdown-container {
-    flex: 1 1 20%; /* Adjust this to control the space taken by timers */
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 10px;
-}
-.itemTableContainer {
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 20px;
-}
+.weaponContainer, .armorContainer {width: 200px;height: 400px;background-color: darkgray;}
 /* Large screens (above 1080p) */
 @media (min-width: 1921px) {
     .table-container, .countdown-container {
